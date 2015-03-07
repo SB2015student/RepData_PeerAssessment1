@@ -9,7 +9,25 @@ output:
 
 
 ## Loading and preprocessing the data
+(1) Load necessary libraries
+(2) Read file
+(3) Remove the NA data from data set
 
+
+```r
+## Libraries used in this code base
+library (dplyr)
+library (tidyr)
+library (lubridate)
+library (lattice)
+
+## Read File 
+activityData <- read.csv("activity.csv")
+myDF <- as.data.frame(activityData)
+
+## Excluding all 'NA's from the data set
+validData <- myDF[!is.na(myDF$steps),]  
+```
 
 ## What is mean total number of steps taken per day?
 (1) Calculate the total number of steps taken per day
