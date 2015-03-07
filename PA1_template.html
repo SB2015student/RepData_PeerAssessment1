@@ -203,6 +203,24 @@ hr {
 <body>
 <h2>Loading and preprocessing the data</h2>
 
+<p>(1) Load necessary libraries
+(2) Read file
+(3) Remove the NA data from data set</p>
+
+<pre><code class="r">## Libraries used in this code base
+library (dplyr)
+library (tidyr)
+library (lubridate)
+library (lattice)
+
+## Read File 
+activityData &lt;- read.csv(&quot;activity.csv&quot;)
+myDF &lt;- as.data.frame(activityData)
+
+## Excluding all &#39;NA&#39;s from the data set
+validData &lt;- myDF[!is.na(myDF$steps),]  
+</code></pre>
+
 <h2>What is mean total number of steps taken per day?</h2>
 
 <p>(1) Calculate the total number of steps taken per day
