@@ -9,7 +9,11 @@ output:
 
 
 ## Loading and preprocessing the data
-```{r base, results='hide', echo=FALSE}
+(1) Load necessary libraries
+(2) Read file
+(3) Remove the NA data from data set
+
+```{r base, results='hide', echo=TRUE}
 
 ## Libraries used in this code base
 library (dplyr)
